@@ -1,7 +1,7 @@
 
 var casper = require('casper').create({verbose: true, logLevel: "debug"});
 
-var url = 'https://www.kinds.or.kr/news/subMain.do'
+var url = 'https://www.kinds.or.kr/news/subMain.do';
 
 casper.start();
 
@@ -23,6 +23,10 @@ function loggingData() {
         console.log(data[i]);
     }
 }
+
+casper.then(function() {
+	casper.wait(3000);
+});
 
 casper.then(function() {
     casper.wait(3000);
